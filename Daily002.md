@@ -113,7 +113,7 @@ Daily002: Introduce to React
 
       Call Stack 1:
 
-      ```
+   ```
       NameComponent (AppTest.jsx:36)
       renderWithHooks (ReactDOM14.js:853)
       updateFunctionComponent (ReactDOM17.js:141)
@@ -140,12 +140,12 @@ Daily002: Introduce to React
       discreteUpdates$1 (ReactDOM22.js:179)
       discreteUpdates (ReactDOM03.js:460)
       dispatchDiscreteEvent (ReactDOM05.js:673)
-      ```
+   ```
 
 
       Call Stack 2:
 
-      ```
+   ```
       (anonymous) (AppTest.jsx:43)
       invokePassiveEffectCreate (ReactDOM23.js:205)
       callCallback (ReactDOM03.js:649)
@@ -166,7 +166,7 @@ Daily002: Introduce to React
       discreteUpdates$1 (ReactDOM22.js:179)
       discreteUpdates (ReactDOM03.js:460)
       dispatchDiscreteEvent (ReactDOM05.js:673)
-      ```
+   ```
 
 
       //
