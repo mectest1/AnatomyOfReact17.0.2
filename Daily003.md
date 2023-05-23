@@ -1,18 +1,76 @@
-* Daily003: On React Fiber
+# Daily003: On React Fiber
 
-1, Article by Andew Clarke: React Fiber Architecture
+1, Article by Andrew Clarke: React Fiber Architecture
+
    ref: <https://github.com/acdlite/react-fiber-architecture>
 
-   1,
+   1, Prerequisites:
 
-   2, 
+      Article from Sebastian Markbage: React - Basic Theoretical Concepts
+      ref: <https://github.com/reactjs/react-basic>
+
+      > The core premise for React is that UIs are simply a projection of data into a different form of data.
+      
+   
+   2, React Design Principles
+      ref: <https://legacy.reactjs.org/docs/design-principles.html>
+
+      > ...We can prioritize work coming from user interactions (such as an animation caused by a button click) over less important background work (such as rendering new content just loaded from the network) to avoid dropping frames.
+
+      > There is an internal joke in the team that React should have been called "Schedule" because React does not want to be fully "reactive".
+
+      > ...We prefer boring code to clever code. Code is disposable and often changes. So it is important that it doesn't introduce new internal abstractions unless absolutely necessary. Verbose code that is easy to move around, change and remove is preferred to elegant code that is prematurely abstracted and hard to change.
+      
+   3, Key Concepts:
+
+      - Reconciliation: the algorithm React uses to diff one tree with another to determine which parts need to be changed.
+      - Update: a change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+	  - React is designed so that reconciliation and rendering ar eseparate phases. The reconciler does the work of computing which parts of a tree have chagned; the renderer then uses that information to actually update the rendered app.
+	  - Fiber reimplements the reconciler. It is not principlally concerned with rendering.
+      - Scheduling: the process of determining when work should be performed
+      - Work: any computations that must be performed. Work is usually the result of an update.
+      
+
+   4, Purpose of Fiber: enable React to
+      - pause work and come back to it later
+      - assign priority to different types of work
+      - reuse previously completed work
+      - abort work if it's no longer needed
+
+
+   5, A fiber represents a unit of work
+
+   6, requestIdleCallback() and requestAnimationFrame()
+
+   7, Wouldn't it be great if we could cutomize the behavior of the call stack to optimize for rendering UIs? Wouldn't it be great if we could interrupt the call stack at will and manipulate stack frames manually?
+   -- That is te purpose of the React Fiber. Fiber is reimplementation of the stack, specialized for React components. You can think of a single fiber as a virtual stack frame.
+
+   8, Structurer of Fiber
+      - type and key
+      - child and sibling
+      - return
+      - pendingProps and memoizeprops
+      - pendingWorkPriority
+      - alternate, flush, and work-in-progress
+      - ouptut
+      
+
+   9, Remaining questions:
+      - how ot scheduler finds the next unit of work to perform
+      - how priority is tracked and propagated through the fiber tree
+      - how the scheduler knows when to pause and resume work
+      - how work is flushed and marked as complete
+      - how side-effects (such as lifecycle methods) work
+      - what a coroutine is and how it can be used to implement features like context and layout
+
+    
 
 
 2, Article by Max Koretskyi: Insider Fiber: an in-depth overview of the new reconciliation algorithm in React
    ref: <https://blog.ag-grid.com/inside-fiber-an-in-depth-overview-of-the-new-reconciliation-algorithm-in-react/>
 
 
-   1,
+   1, 
 
    2,
 
@@ -155,4 +213,7 @@
    ref2: <https://stackoverflow.com/questions/28725955/how-do-i-test-a-single-file-using-jest>
 
 
-7, 
+7, Daily Dose of Emacs:
+   C-x TAB runs command indent-rigidly, which is an interactive native compiled Lips that indents all lines starting in the region.
+
+8, 

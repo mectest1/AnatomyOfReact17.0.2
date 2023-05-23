@@ -1,4 +1,4 @@
-* Daily 001: Get things running in local env
+# Daily 001: Get things running in local env
 
 1, Check out source code of React 17.0.2 from official repository
 

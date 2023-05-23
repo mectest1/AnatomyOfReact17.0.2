@@ -1,4 +1,4 @@
-* Daily002: Introduce to React
+# Daily002: Introduce to React
 
 
 1, Q: How does component like <App> get translated into react code?
