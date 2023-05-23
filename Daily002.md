@@ -1,4 +1,4 @@
-Daily002: Introduce to React
+* Daily002: Introduce to React
 
 
 1, Q: How does component like <App> get translated into react code?
@@ -113,7 +113,7 @@ Daily002: Introduce to React
 
       Call Stack 1:
 
-   ```
+      ```
       NameComponent (AppTest.jsx:36)
       renderWithHooks (ReactDOM14.js:853)
       updateFunctionComponent (ReactDOM17.js:141)
@@ -140,12 +140,12 @@ Daily002: Introduce to React
       discreteUpdates$1 (ReactDOM22.js:179)
       discreteUpdates (ReactDOM03.js:460)
       dispatchDiscreteEvent (ReactDOM05.js:673)
-   ```
+      ```
 
 
       Call Stack 2:
 
-   ```
+      ```
       (anonymous) (AppTest.jsx:43)
       invokePassiveEffectCreate (ReactDOM23.js:205)
       callCallback (ReactDOM03.js:649)
@@ -166,7 +166,7 @@ Daily002: Introduce to React
       discreteUpdates$1 (ReactDOM22.js:179)
       discreteUpdates (ReactDOM03.js:460)
       dispatchDiscreteEvent (ReactDOM05.js:673)
-   ```
+      ```
 
 
       //
@@ -177,10 +177,28 @@ Daily002: Introduce to React
 
 5, Q: What are these React/ReactDOM methods for? Or, what are they trying to achieve?
 
-   to answer that question, tutorials or docs should be checked first.
-
-
+   to answer that question,
+   1, tutorials or docs should be checked first.
+   2, Also, I need to re-write the source code React.js to and ReactDOM for my understanding;
+   3, --and for that to happen, I need to break React.js and ReactDOM.js into multiple parts;
+      This could be achieved by splitting the original source file into multiple files, each with around 1,000 lines;
+      UMD wrapper could be stripped brutally;
+      Major issues: problems caused by name conflicts, which could be resolved fairly quickly;
+   4, 
 
 6, Key takeaways today:
    1, Indent text blokc in Emacs: C-M-\
-   2, 
+   2, Tutorial from JSer: React Soruce Code Walkthrough:
+      ref: <https://github.com/JSerZANP/react-source-code-walkthrough-en/tree/main>
+      ref2: <https://jser.dev/series/react-source-code-walkthrough>
+      ref3: <https://jser.dev/>
+
+   3, Topic: React Fiber Architecture
+      ref: <https://github.com/acdlite/react-fiber-architecture>
+      ref2: <https://blog.logrocket.com/deep-dive-react-fiber/>
+      ref3: <https://blog.ag-grid.com/inside-fiber-an-in-depth-overview-of-the-new-reconciliation-algorithm-in-react/>
+      ref4: <https://legacy.reactjs.org/docs/codebase-overview.html>
+
+   4, 
+
+7, 
